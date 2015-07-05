@@ -6,11 +6,6 @@ else
 	message="No commit message specified"
 fi
 
-
-echo "REBASING REPOSITORY"
-git pull --rebase
-echo "REBASE DONE"
-
 echo "Adding files..."
 git add .
 echo "Files added"
@@ -24,6 +19,11 @@ if [ $return_value -ne 0 ];then
 else
 	echo "Commit succeeded"
 fi
+
+echo "REBASING REPOSITORY"
+git pull --rebase
+echo "REBASE DONE"
+
 
 echo "Running git remote"
 git remote add origin https://github.com/yoyointhezoo/Blocbox.git

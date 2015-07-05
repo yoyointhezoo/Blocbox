@@ -6,8 +6,14 @@ else
 	message="No commit message specified"
 fi
 
+
+echo "REBASING REPOSITORY"
+git pull --rebase
+echo "REBASE DONE"
+
 echo "Adding files..."
 git add .
+echo "Files added"
 
 echo "Committing, commit message is: $message"
 git commit -m "$message"
@@ -15,10 +21,30 @@ return_value=$?
 if [ $return_value -ne 0 ];then 
 	echo "Commit failed!"
 	exit 1
+else
+	echo "Commit succeeded"
 fi
 
+echo "Running git remote"
+git remote add origin https://github.com/yoyointhezoo/Blocbox.git
+return_value=$?
+if [ $return_value -ne 0 ];then 
+	echo "Git remote failed!"
+	exit 1
+else
+	echo "Git remote done"
+fi
+
+echo "Running git push"
+git push -u origin master
+return_value=$?
+if [ $return_value -ne 0 ];then 
+	echo "Git push failed!"
+	exit 1
+else
+	echo "Git push done"
+fi
 
 exit 0
-git commit -m "First commit"
-git remote add origin https://github.com/yoyointhezoo/Blocbox.git
-git push -u origin master
+
+

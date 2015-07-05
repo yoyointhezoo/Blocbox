@@ -6,12 +6,19 @@ else
 	message="No commit message specified"
 fi
 
+echo "Adding files..."
 git add .
 
-echo "Pushing new commit. Commit message is: $message"
+echo "Committing, commit message is: $message"
+git commit -m "$message"
+return_value=$?
+if [ return_value -ne 0 ];then 
+	echo "Commit failed!"
+	exit 1
+fi
 
 
-git add .
+exit 0
 git commit -m "First commit"
 git remote add origin https://github.com/yoyointhezoo/Blocbox.git
 git push -u origin master

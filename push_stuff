@@ -7,36 +7,24 @@ else
 	message="No commit message specified"
 fi
 
-echo "Adding files..."
 git add . 1>&2 2>/dev/null
-echo "Files added"
+if [ $? -ne 0 ];then
+	echo "Git add failed!"
+	exit 1
+fi
 
-echo "Committing, commit message is: $message"
 git commit -m "$message" 1>&2 2>/dev/null
 return_value=$?
 if [ $return_value -ne 0 ];then 
 	echo "Commit failed!"
 	exit 1
-else
-	echo "Commit succeeded"
 fi
 
-echo "REBASING REPOSITORY"
 git pull --rebase  1>&2 2>/dev/null
-echo "REBASE DONE"
+if [ $? -ne 0 ];then
+	echo "git pull rebase failed!"
+fi
 
-
-#echo "Running git remote"
-#git remote add origin https://github.com/yoyointhezoo/Blocbox.git
-#return_value=$?
-#if [ $return_value -ne 0 ];then 
-#	echo "Git remote failed!"
-#	exit 1
-#else
-#	echo "Git remote done"
-#fi
-
-echo "Running git push"
 git push -u origin master  1>&2 2>/dev/null
 return_value=$?
 if [ $return_value -ne 0 ];then 

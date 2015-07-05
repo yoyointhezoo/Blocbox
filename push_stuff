@@ -8,11 +8,11 @@ else
 fi
 
 echo "Adding files..."
-git add .
+git add . 1>&2 2>/dev/null
 echo "Files added"
 
 echo "Committing, commit message is: $message"
-git commit -m "$message"
+git commit -m "$message" 1>&2 2>/dev/null
 return_value=$?
 if [ $return_value -ne 0 ];then 
 	echo "Commit failed!"
@@ -22,7 +22,7 @@ else
 fi
 
 echo "REBASING REPOSITORY"
-git pull --rebase
+git pull --rebase  1>&2 2>/dev/null
 echo "REBASE DONE"
 
 
@@ -37,13 +37,13 @@ echo "REBASE DONE"
 #fi
 
 echo "Running git push"
-git push -u origin master
+git push -u origin master  1>&2 2>/dev/null
 return_value=$?
 if [ $return_value -ne 0 ];then 
-	echo "Git push failed!"
+	echo "Git push failed. OH NOOOOO SOMETHING WENT WROOOOOOONG :((:(:(:(("
 	exit 1
 else
-	echo "Git push done"
+	echo "EVERYTHING WAS OKAY! :)"
 fi
 
 exit 0

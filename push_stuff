@@ -25,15 +25,15 @@ git pull --rebase
 echo "REBASE DONE"
 
 
-echo "Running git remote"
-git remote add origin https://github.com/yoyointhezoo/Blocbox.git
-return_value=$?
-if [ $return_value -ne 0 ];then 
-	echo "Git remote failed!"
-	exit 1
-else
-	echo "Git remote done"
-fi
+#echo "Running git remote"
+#git remote add origin https://github.com/yoyointhezoo/Blocbox.git
+#return_value=$?
+#if [ $return_value -ne 0 ];then 
+#	echo "Git remote failed!"
+#	exit 1
+#else
+#	echo "Git remote done"
+#fi
 
 echo "Running git push"
 git push -u origin master

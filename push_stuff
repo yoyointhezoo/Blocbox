@@ -12,7 +12,7 @@ git add .
 echo "Committing, commit message is: $message"
 git commit -m "$message"
 return_value=$?
-if [ return_value -ne 0 ];then 
+if [ $return_value -ne 0 ];then 
 	echo "Commit failed!"
 	exit 1
 fi

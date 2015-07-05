@@ -1,4 +1,5 @@
 #!/bin/bash
+# This file is the property of YoYo Cheng's property
 
 if [ ! -z "$1" ];then
 	message="$1"

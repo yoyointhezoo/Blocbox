@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if [ ! -z "$1" ];then
+	message="$1"
+else
+	message="No commit message specified"
+fi
+
+git add .
+
+echo "Pushing new commit. Commit message is: $message"
+
+
+git add .
+git commit -m "First commit"
+git remote add origin https://github.com/yoyointhezoo/Blocbox.git
+git push -u origin master

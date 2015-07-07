@@ -1,0 +1,39 @@
+#!/bin/bash
+# This file is the property of YoYo Cheng.
+
+if [ ! -z "$1" ];then
+	message="$1"
+else
+	message="No commit message specified"
+fi
+
+git add . 1>&2 2>/dev/null
+if [ $? -ne 0 ];then
+	echo "Git add failed!"
+	exit 1
+fi
+
+git commit -m "$message" 1>&2 2>/dev/null
+return_value=$?
+if [ $return_value -ne 0 ];then 
+	echo "Commit failed!"
+	exit 1
+fi
+
+git pull --rebase  1>&2 2>/dev/null
+if [ $? -ne 0 ];then
+	echo "git pull rebase failed!"
+fi
+
+git push -u origin master  1>&2 2>/dev/null
+return_value=$?
+if [ $return_value -ne 0 ];then 
+	echo "Git push failed. OH NOOOOO SOMETHING WENT WROOOOOOONG :((:(:(:(("
+	exit 1
+else
+	echo "EVERYTHING WAS OKAY! :)"
+fi
+
+exit 0
+
+

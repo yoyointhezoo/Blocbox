@@ -258,6 +258,9 @@ header nav ul {
  .testimonials ul li {
    list-style-type: none;
  }
+ .testimonials ul li:nth-child(even) {
+   margin-top: 30px;
+ }
  .testimonials blockquote {
    color:#FFFFFF;
    text-align: left;

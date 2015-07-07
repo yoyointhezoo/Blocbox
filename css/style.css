@@ -55,6 +55,12 @@ p {
 		width: 750px;
 	}
 }
+@media screen {
+	.container {
+		font-size: 50px
+	}
+}
+
 
 @media (min-width: 992px) {
 	.container {

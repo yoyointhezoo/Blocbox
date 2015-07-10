@@ -450,6 +450,7 @@ footer p, footer nav ul {
    float:right;
    width:98%;
    position: relative;
+   text-align: left;
  }
  .content .header {
    margin:0 1% 20px;

@@ -31,6 +31,7 @@ p {
   padding-left: 15px;
   padding-right: 15px;
   position: relative;
+  z-index: -1;
 }
 
 .container:before,
@@ -771,12 +772,6 @@ footer p, footer nav ul {
   font-weight:100;
   position:absolute;
 }
-
-
-
-
-
-
 
 
 

@@ -1,22 +1,21 @@
 <!DOCTYPE html>
-<html lang="en-us">
-<style>
+ <html lang="en-us">
+ <style>
 a:hover {
-    background-color: yellow;
+    background-color: pink;
 }
-
 </style>
-<head>
+ <head>
    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta charset="UTF-8">
-   
+ 
    <title>Dashboard | Blocbox</title>
-
-<!-- Google Fonts -->
+ 
+   <!-- Google Fonts -->
    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic|Varela+Round' rel='stylesheet' type='text/css'>
-
-<!-- CSS -->
+ 
+   <!-- CSS -->
    <link rel="stylesheet" href="css/normalize.css">
    <link rel="stylesheet" href="css/style.css" />
    <link rel="stylesheet" href="css/font-awesome.css">
@@ -24,13 +23,12 @@ a:hover {
 
  </head>
 
+ <body class="dashboard">
+ <!-- RESPONSIVE NAV -->
+ <a class="hamburger" id="menu" href="#">&#9776;</a>
 
-<body class="dashboard">
-<!-- RESPONSIVE NAV -->
-<a class="hamburger" id="menu" href="#">&#9776;</a>
-
-<!-- LEFT NAV -->
-   <nav id="left-nav" class="left-nav">
+ <!-- LEFT NAV -->
+ <nav id="left-nav" class="left-nav">
      <a ref="#" class="site-logo"><img src="images/site-logo.png" alt="Blocbox" /></a>
      <div class="items">
        <p>Items</p>
@@ -46,20 +44,16 @@ a:hover {
          <li><a href="#"><i class="fa fa-inbox"></i> BB Photos</a></li>
          <li><a href="#"><i class="fa fa-plus-square-o"></i> Add a new box</a></li>
        </ul>
-        <p>Settings</p>
-       <ul>
-         <li><a href="#"><i class="fa fa-cog"></i> Account Settings</a></li>
-         <li><a href="#"><i class="fa fa-users"></i> Collaborators</a></li>
-         <li><a href="#"><i class="fa fa-sign-out"></i> Sign Out</a></li>
-       </ul>
      </div>
-    <div class="settings">
-     <img src="https://s3.amazonaws.com/uifaces/faces/twitter/rem/128.jpg">
-     <p>Yoyo Cheng</p>
-    </div>
-   </nav>
 
-  <main role="main">
+   <div class="settings">
+     <img src="https://s3.amazonaws.com/uifaces/faces/twitter/rem/128.jpg">
+     <p>Y. Cheng</p>
+     <a href="#"><i class="fa fa-cog"></i></a>
+   </div>
+
+   </nav>
+   <main role="main">
    <!-- Benefits -->
    <section class="content">
      <div class="container">
@@ -75,9 +69,9 @@ a:hover {
               </ul>
             </li>
           </ul>
+          
        </div>
      </div>
-   <!-- Benefits -->
      <div class="container">
        <div class="content-item">
          <div class="item-box">
@@ -139,16 +133,14 @@ a:hover {
      </div> 
    </section>
  </main>
-
  <script src="js/jquery-2.1.4.min.js"></script>
  <script src="js/dropit.js"></script>
  <script type="text/javascript">
      $(".menu").dropit();
      $( "#menu" ).click(function() {     
-     $("#left-nav").toggleClass("open", 200);      
+         $("#left-nav").toggleClass("open", 200);      
      });
- </script>
+   </script>
 
  </body>
-
  </html>

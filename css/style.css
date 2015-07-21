@@ -1,3 +1,4 @@
+/* ========== standard styles ========= */
 html, body{
   overflow-x: hidden;
 }
@@ -12,7 +13,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-
 h2 {
   font-size:28px;
   font-weight: normal;
@@ -24,7 +24,7 @@ p {
   line-height: 19px;
   font-weight: 100;
 }
-/* GRID */
+/* ========== GRID ==========*/
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -50,6 +50,8 @@ p {
   min-height: 1px;
   margin:0 2% 20px;
 }
+
+/* ========== grid media queries ========== */
 
 @media (min-width: 768px) {
   .container {
@@ -77,7 +79,19 @@ p {
   }
 }
 
-/* HEADER */
+/* =========== BUTTONS =========== */
+ .btn {
+   border-radius: 8px;
+   color:#FFFFFF;
+   font-weight: 700;
+   text-decoration: none;
+   padding:10px 30px;
+   background: #EF9809;
+   border: 2px solid #EF9809;
+   box-shadow: 0px 4px 0px 0px #4891BE;
+ }
+
+/* =========== HEADER ========== */
 header {
   color:#FFFFFF;
     background: #3d4750;
@@ -134,19 +148,9 @@ header nav ul {
    margin:3em auto 0;
  }
 
- /* BUTTONS */
- .btn {
-   border-radius: 8px;
-   color:#FFFFFF;
-   font-weight: 700;
-   text-decoration: none;
-   padding:10px 30px;
-   background: #EF9809;
-   border: 2px solid #EF9809;
-   box-shadow: 0px 4px 0px 0px #4891BE;
- }
+ 
 
- /* BENEFITS */
+ /* ========== BENEFITS ========== */
  .benefits {
    text-align: center;
    display:block;
@@ -170,7 +174,7 @@ header nav ul {
    color:#3498DB;
  }
 
- /* PRICING */
+ /* ========== PRICING ========== */
  .pricing {
    background: #34495E url("../images/background.png") top center no-repeat;
    background: url("../images/background.png") top center no-repeat, linear-gradient(206deg, #5F81A3 0%, #34495E 94%);
@@ -194,7 +198,7 @@ header nav ul {
   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.20);
   min-height: 439px;
   position: relative;
-    margin-top: 25px;
+  margin-top: 25px;
  }
  .box.middle {
   min-height: 485px;
@@ -248,7 +252,7 @@ header nav ul {
    font-style:italic;
  }
 
-/* TESTIMONIALS */
+/* ============== TESTIMONIALS ============== */
  .testimonials {
    padding:4em 0;
    text-align: center;
@@ -301,12 +305,12 @@ header nav ul {
    margin-top: 30px;
  }
 
-/* reinforce */
+/* =============== reinforce ============== */
 section {
   text-align: center;
 }
 
-/ /* FOOTER */
+ /* ================ FOOTER =============== */
 footer {
    background-color: #34495E;
    background-image: linear-gradient(to top,
@@ -317,7 +321,7 @@ footer {
    overflow: hidden;
    z-index: 0;
  }
-footer p, footer nav ul {
+ footer p, footer nav ul {
    font-size:14px;
    font-weight:100;
    text-align: center;
@@ -414,7 +418,7 @@ footer p, footer nav ul {
      text-align: right;
    }
 }
-/* DASHBOARD */
+/* ================ DASHBOARD =================== */
 .dashboard {
   background:#F7F7F7;
 }
@@ -494,7 +498,7 @@ footer p, footer nav ul {
    text-align: center;
    margin-right:8px;
  }
-  /* LEFT NAVBAR SETTINGS */
+  /* ========== LEFT NAVBAR SETTINGS ========== */
  .left-nav .settings {
    position:absolute;
    background:#22303E;
@@ -526,7 +530,7 @@ footer p, footer nav ul {
    margin-right:10px;
    margin-top:8px;
  }
- /* CONTENT */
+ /* ========== CONTENT ========== */
  .content {
    padding:6em 1% 1.5em;
    float:right;
@@ -639,6 +643,7 @@ footer p, footer nav ul {
      margin:0 1% 25px;
    }
  }
+ 
  .item-box > img {
    position:absolute;
    height:100%;
@@ -672,112 +677,7 @@ footer p, footer nav ul {
    margin:5px 0 0;
  }
 
- /* DROPIT */
-.dropit {
-  list-style: none;
-  padding: 20px;
-  margin: 15px 0 0;
-  float:right;
-  display:inline-block;
-}
-.dropit .dropit-trigger { 
-  position: relative; 
-}
-.dropit .dropit-submenu {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  z-index: 1000;
-  display: none;
-  min-width: 100px;
-  list-style: none;
-  padding: 20px;
-  margin: 15px 0 0;
-}
-
-.dropit .dropit-open .dropit-submenu { 
-  display: block;
-  background: #FFFFFF;
-  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.30);
-  border-radius: 4px;
-}
-.dropit .dropit-open .dropit-submenu li { 
-  display: block;
-  margin-bottom: 20px;
-}
-.dropit .dropit-open .dropit-submenu li:last-child { 
-  margin-bottom: 0px;
-}
-.dropit .dropit-open .dropit-submenu li a { 
-  color:#34495E;
-  text-decoration: none;
-  font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-weight:100;
-}
-
- /* POPIT */
-
-.settings .dropit .dropit-submenu li:last-child {
-  left: 0;
-  z-index: 1000;
-  display: none;
-  min-width: 100px;
-  list-style: none;
-  padding: 50px 15px;
-  text-align: left;
-}
-
-.settings .dropit {
-  list-style: none;
-  padding: 20px;
-  margin: 15px 0 0;
-  float:right;
-  display:inline-block;
-}
-.settings .dropit .dropit-trigger { 
-  position: relative; 
-}
-.setting .dropit .dropit-submenu {
-  position: absolute;
-  bottom: 100%;
-  left: 0;
-  z-index: 1000;
-  display: none;
-  min-width: 100px;
-  list-style: none;
-  padding: 20px;
-  margin: 15px 0 0;
-  text-align: left;
-}
-
-.settings .dropit .dropit-open .dropit-submenu li{ 
-  display: block;
-  background: #FFFFFF 20%;
-  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.30);
-  border-radius: 4px;
-}
-.settings .dropit .dropit-open .dropit-submenu li { 
-  display: block;
-  margin-bottom: 20px;
-}
-.settings .dropit .dropit-open .dropit-submenu li:last-child { 
-  margin-bottom: 0px;
-}
-.settings .dropit .dropit-open .dropit-submenu li a { 
-  color: cadetblue;
-  text-decoration: none;
-  text-align: left;
-  line-height: 2px;
-  font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-weight:100;
-  position:absolute;
-}
-
-
-
-
-
-
+ 
 
 
 
